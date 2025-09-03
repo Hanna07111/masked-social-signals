@@ -22,6 +22,8 @@ parameters:
     
     pretrained:
       value: 'pretrained'
+
+    # 누락된 피처를 어떻게 채울지. -> 이 경우 이전 값 복사
     feature_filling:
       value: 'repeat'
 
@@ -37,17 +39,24 @@ parameters:
     test_idx:
       values: [30]
 
-    
+    # transformer 블록의 층 개수 (디코더 12 layers)
     n_layer:
       value: 12 # 12
+
+    # multihead attention head 개수
     n_head:
       value: 16 # 16
+
     activation_function: 
       value: 'gelu'
     n_ctx:
       value: 216
+
+    # Residual Dropout
     resid_pdrop:
       value: 0.1
+    
+    # Attention Dropout
     attn_pdrop:
       value: 0.1
     n_bundle:

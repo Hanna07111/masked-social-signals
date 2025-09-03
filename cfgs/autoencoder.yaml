@@ -1,3 +1,4 @@
+# 하이퍼파라미터 탐색 -> grid search
 method: 'grid'
 
 metric: 
@@ -14,8 +15,12 @@ parameters:
       value: 'gaze'
     segment:
       value: 12
+
+    # 3초x30fps = 90 프레임
     segment_length:
       value: 90
+
+    # 은닉 레이어 1개, 차원 128
     hidden_sizes: 
       #value: [512]
       value: [128]
@@ -28,6 +33,8 @@ parameters:
       value: 1e-5
     batch_size:
       value: 16
+
+    # 분산학습 방식: distributed data parallel
     strategy:
       value: 'ddp'
     

@@ -22,18 +22,29 @@ parameters:
 
     hidden_sizes: 
       value: [1024]
+
+    # CNN latent featur map 개수 -> 나중에 이 128개가 codebook 임베딩으로 매핑
     h_dim:
       value: 128
+    
+    # CNN kernel 크기
     kernel:
       value: 3
+
     stride:
       value: 1
+    
+    # VQ-VAE 내부 Residual block 설정
     res_h_dim:
       value: 32
     n_res_layers:
       value: 2
+    
+    # codebook 벡터 개수
     n_embeddings:
       value: 512
+
+    # codebook 벡터 차원
     embedding_dim:
       value: 32
     beta:
